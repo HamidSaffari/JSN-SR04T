@@ -10,7 +10,7 @@
 
 #include <SoftwareSerial.h>
 
-SoftwareSerial mySerial(10, 11); //(RX-pin, TX-pin) Note that RX of Arduino goes to TX of module.
+SoftwareSerial mySerial(10, 11); //(RX-pin, TX-pin) Note that RX of Arduino goes to TX of module and Tx to RX as well.
 
 void setup() {
 	
