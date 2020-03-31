@@ -4,11 +4,13 @@
   Created by Hamid Saffari @ Jan 2020. https://github.com/HamidSaffari/JSN-SR04T
   Released into the public domain.
   
+  First you shoud solder a 120Kohm resistor in R27 marked (0603 or 0805 footprint SMD package),
+  so module goes to the mode that able it to communicate thru UART serial port.
 */
 
 #include <SoftwareSerial.h>
 
-SoftwareSerial mySerial(10, 11); // (RX-pin, TX-pin)
+SoftwareSerial mySerial(10, 11); //(RX-pin, TX-pin) Note that RX of Arduino goes to TX of module.
 
 void setup() {
 	
