@@ -37,7 +37,7 @@ int readDistance_Serial() {
   byte serialData[5];
   int distance=0;
   while (mySerial.available()) {
-    mySerial.read(); //it flushes the receive buffer.
+    mySerial.read(); //it flushes the previous received buffer.
   }
   if( mySerial.readBytes(serialData,4) > 0) {
 	int sum = (serialData[0]+serialData[1]+serialData[2]) & 0x00FF;
